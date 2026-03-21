@@ -34,8 +34,23 @@ Gmail inbox using machine learning.
 4. Go to **Credentials** → Create **OAuth 2.0 Client ID**
 5. Download the credentials file and rename it to `credentials.json`
 6. Place `credentials.json` in the project root folder
-7. Run the app — it will ask you to login with Google the first time
-8. A `token.pickle` file will be generated automatically
+7. In `simple_server.py`, find this line:
+```python
+flow = InstalledAppFlow.from_client_secrets_file(
+    'token!!!!!!!',  ← replace this with your credentials filename
+    SCOPES
+)
+```
+8. Replace `'token!!!!!!!'` with `'credentials.json'`
+9. Run the app — it will ask you to login with Google the first time
+10. A `token.pickle` file will be generated automatically
+
+## ⚠️ Important
+Never commit these files to GitHub:
+```
+token.pickle
+credentials.json
+```
 
 ## 🚀 How to run
 1. Clone the repo
@@ -82,10 +97,5 @@ phishing-email-detector/
 - Never share these files
 - The app only reads your emails — it never modifies or deletes them
 
-## ⚠️ Important
-Never commit these files to GitHub:
-```
-token.pickle
-credentials.json
-```
+
 
