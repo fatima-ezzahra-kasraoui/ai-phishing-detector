@@ -1,4 +1,4 @@
-# Phishing Email Detector 🎣🔍
+# Phishing Email Detector   🎣🔍
 
 AI-powered application that detects phishing emails in your 
 Gmail inbox using machine learning.
